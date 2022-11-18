@@ -1,5 +1,23 @@
 {
   "dependencies": {
     "inquirer": "^8.2.4"
-  }
+  },
+  "name": "generate-readme",
+  "description": "This command line application generates a readme.md file and folder based on the user's input.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kwm0304/Generate-readme.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kwm0304/Generate-readme/issues"
+  },
+  "homepage": "https://github.com/kwm0304/Generate-readme#readme"
 }
