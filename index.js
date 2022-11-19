@@ -1,8 +1,8 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const genReadMe = ('./utils/generateMarkdown');
-
+const generateMarkdown = require('./Develop/utils/generateMarkdown');
+const userInput = []
 // TODO: Create an array of questions for user input
 const questions = () => {
     return inquirer
@@ -25,7 +25,7 @@ const questions = () => {
         {
             type: 'input',
             message: 'What is the title of your project?',
-            name: 'project'
+            name: 'title'
         },
         {
             type: 'input',
@@ -56,14 +56,14 @@ const questions = () => {
             type: 'checkbox',
             message: 'Choose a license for your project',
             name: 'license',
-            choices: ['none', 'Apache', 'GPLv3', 'GPLv2', 'BSD3', 'BSD2']
+            choices: ["none", "Apache", "GPLv3", 'GPLv2', 'BSD3', 'BSD2']
         }
-    ]);
+    ])
 };
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile("README.md", data, (err) => {
+    fs.writeFile(fileName, data, err => {
         if (err)
         console.log(err);
         else {
@@ -74,11 +74,14 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
-    questions().then(answers => {
-        return genReadMe(answers)
+    questions().then(data => {
+        return generateMarkdown(data)
     })
-    .then(data => {
-        return writeToFile(data)
+    // generateMarkdown.renderLicenseBadge()
+    // generateMarkdown.renderLicenseLink()
+    // generateMarkdown.renderLicenseSection()
+    .then(answers => {
+        return writeToFile("README.md",answers)
     })
 }
 
