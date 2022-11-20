@@ -1,9 +1,9 @@
 # Readme Generator
 
-  ![GitHub license](https://img.shields.io/badge/license--blue.svg)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
   ## Description
-  Generates readme based on user responses to inquirer prompts
+  Generates readme
       
   ## Table of Contents
   - [Description](#description)
@@ -15,28 +15,26 @@
   - [Questions](#questions)
   
   ## Installation
-  install w/ npm i inquirer@8.2.4 node.js
+
+  install
       
   ## Usage
-  However you want
+  use
 
   ## License
-    
-    ### ### Notice 
-    This product is covered under undefined
-  ### Notice 
-    This product is covered under 
+
+    Notice: This product is covered under MIT license.
 
   ## Contributing
 
-  dont
+  contribute
         
   ## Test
 
-  Run program, if you don't like it delete the generated readme
+  test
         
   ## Questions?
 
   email: mckenzie.kenan@yahoo.com<br>
   GitHub Username: kwm0304<br>
-  Project Repo: undefined
+  Project Repo: Generate-readme
