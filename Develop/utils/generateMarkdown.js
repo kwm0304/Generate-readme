@@ -14,7 +14,7 @@ function renderLicenseBadge(license) {
         return `[![License: GPL v2](https://img.shields.io/badge/License-GPL_v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)`
     } else if (license === "BSD3") {
         return `[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)`
-    } else return ""
+    } else return ''
 } 
 
 // TODO: Create a function that returns the license link
@@ -22,7 +22,7 @@ function renderLicenseBadge(license) {
 function renderLicenseLink(data) {
     if (data.license !== "None") {
         return `Notice: This product is covered under ${data.license} license.`
-    } else return '' 
+    } else return ''
 }
 
 // TODO: Create a function that returns the license section of README
@@ -30,7 +30,7 @@ function renderLicenseLink(data) {
 function renderLicenseSection(data) {
     if (data.license !== "None") { 
     return `## License
-
+    
     ${renderLicenseLink(data)}`;
     } else return ''
 }
@@ -58,6 +58,7 @@ function generateMarkdown (data) {
   ${data.installation}
       
   ## Usage
+
   ${data.usage}
 
   ${renderLicenseSection(data)}
@@ -72,9 +73,12 @@ function generateMarkdown (data) {
         
   ## Questions?
 
-  email: ${data.email}<br>
-  GitHub Username: ${data.username}<br>
-  Project Repo: ${data.repo}`;
+  Email: ${data.email}<br>
+  GitHub: [${data.username}](https://github.com/${data.username})<br>
+  Project Repo: [${data.repo}](https://github.com/${data.username}/${data.repo})`;
+
 }
 
-module.exports = { generateMarkdown };
+
+
+module.exports =  { generateMarkdown };

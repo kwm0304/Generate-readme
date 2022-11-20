@@ -71,13 +71,16 @@ function writeToFile(fileName, data) {
     })
 }
 
+
 // TODO: Create a function to initialize app
+//inquirer prompts->populate generateMarkdown page with inquirer answers->write README based on populated generateMarkdown file  
 function init() {
     questions().then(answers => {
         return generateMarkdown(answers)
     })
+    
     .then(userInput => {
-        return writeToFile("README.md",userInput)
+        return writeToFile('./md/README.md',userInput)
     })
 }
 
